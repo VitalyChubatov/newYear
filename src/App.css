@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 30px;
+  width: 300px;
+  height: 110%;
+  z-index: 1;
+  border-radius: 3%;
+  background-color: rgb(89, 102, 113);
+  justify-content: center;
+  align-items: center;
+}
+.head {
+  position: relative;
+  left: 230px;
+
+  top: 80px;
+}
+input {
+  font-size: 28px;
+  border-radius: 10%;
+  padding: 20px;
+}
+input:hover {
+  transition: 1s all;
+  background-color: rgb(78, 78, 82);
+}
+
+button {
+  margin-top: 30px;
+}
+p {
+  font-size: 13px;
+}
+a {
+  color: aliceblue;
+}
+
+svg {
+  margin-top: 30px;
+  font-size: 50px;
+}
+
+.newYear {
+  position: relative;
+  /* top: 70px;
+  left: 50px; */
+}
+
+.chrismas {
+  position: relative;
+  right: 244px;
+  top: 68px;
+  transform: rotate(-30deg);
+}
+
+.chrismas:hover {
+  transition: 1s all;
+  scale: 1.1;
+  top: 60px;
+}
+
+.grinch {
+  position:absolute;
+  align-items: center;
+  top: 115px;
+  left: 490px;
+  z-index: 0;
+}
