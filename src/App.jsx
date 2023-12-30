@@ -78,27 +78,7 @@ function App() {
 
   return (
 		<>
-			<img
-				src={hat}
-				width={120}
-				height={120}
-				className='head'
-        alt='.'
-			/>
-			{isOpen ? (
-				<motion.img
-					src={grinch}
-					alt='.'
-					width={460}
-					height={480}
-					variants={cartAnimation}
-					viewport={{ amount: 0.2, once: true }}
-					initial='hidden'
-					whileInView='visible'
-					className='grinch'
-          onClick={()=>setIsOpen(!isOpen)}
-				/>
-			) : null}
+			<img src={hat} width={120} height={120} className='head' alt='.' />
 			<img
 				src={chrismas}
 				alt='.'
@@ -110,35 +90,56 @@ function App() {
 			<form>
 				<input type='date' onChange={getDate} placeholder='дата' />
 				<button onClick={clickDolg}>
-					{isActive ? 'Скрыть задолжность' : 'Узнать задолжность'}
+					{isActive ? 'Скрыть задолжность' : 'Узнать всю задолжность'}
 				</button>
 				{dateDolg.map(el =>
 					el.date === count ? (
 						<p>
-							{el.value
+							<div className='bold'>
+              {el.value
 								? 'Этого числа ты внес:' + ' ' + el.value + ' ' + 'Рублей'
 								: null}{' '}
+              </div>
+                
 						</p>
 					) : null
 				)}
 				{isActive && (
 					<p>
 						Общий долг:
-						{allSum - dateDolg.reduce((el, item) => el + item.value, 0)} Рублей
+						<b className='bold'>
+							{allSum - dateDolg.reduce((el, item) => el + item.value, 0)}{' '}
+							Рублей
+						</b>
 					</p>
 				)}
 				<a href='https://t.me/houldC'>
 					<FaTelegram />
 				</a>
 			</form>
-
-			<img
-				src={newYear}
-				alt='.'
-				width={220}
-				height={170}
-				className='newYear'
-			/>
+			<div className='wrapper_footer'>
+				<img
+					src={newYear}
+					alt='.'
+					width={220}
+					height={170}
+					className='newYear'
+				/>
+				{isOpen ? (
+					<motion.img
+						src={grinch}
+						alt='.'
+						width={360}
+						height={350}
+						variants={cartAnimation}
+						viewport={{ amount: 0.2, once: true }}
+						initial='hidden'
+						whileInView='visible'
+						className='grinch'
+						onClick={() => setIsOpen(!isOpen)}
+					/>
+				) : null}
+			</div>
 		</>
 	)
 }

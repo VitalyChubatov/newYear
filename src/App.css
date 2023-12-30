@@ -2,7 +2,7 @@
 
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 0 30px;
   padding: 2rem;
   text-align: center;
   font-family: 'Roboto Mono', monospace;
@@ -45,6 +45,7 @@
 }
 
 form {
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -66,6 +67,8 @@ form {
 input {
   font-size: 28px;
   border-radius: 10%;
+  color: wheat;
+  background-color: black;
   padding: 20px;
 }
 input:hover {
@@ -75,9 +78,15 @@ input:hover {
 
 button {
   margin-top: 30px;
+  color: rgba(255, 255, 255, 0.786);
+  font-weight: 600;
+  background-color: #888;
 }
 p {
   font-size: 13px;
+}
+.bold {
+ font-size: 20px; 
 }
 a {
   color: aliceblue;
@@ -90,8 +99,7 @@ svg {
 
 .newYear {
   position: relative;
-  /* top: 70px;
-  left: 50px; */
+  left: 20px;
 }
 
 .chrismas {
@@ -107,10 +115,19 @@ svg {
   top: 60px;
 }
 
+
 .grinch {
-  position:absolute;
-  align-items: center;
-  top: 115px;
-  left: 490px;
+  position: relative; 
+  right: -20px;
+  top: -520px;
   z-index: 0;
+}
+
+.wrapper_footer {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
 }
