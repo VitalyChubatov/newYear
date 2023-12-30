@@ -2,7 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import { motion } from 'framer-motion';
 import grinch from '../public/pngwing.png'
+import chrismas from '../public/Lovepik_com-401665650-christmas-tree.png'
+import hat from '../public/pngfind.com-new-years-hat-png-1902426.png'
+import newYear from '../public/—Pngtree—luxury 2024 new year logo_10839113.png'
 import {FaTelegram} from 'react-icons/fa'
+
 
 const name = new Date();
 function App() {
@@ -75,10 +79,11 @@ function App() {
   return (
 		<>
 			<img
-				src='../public/pngfind.com-new-years-hat-png-1902426.png'
+				src={hat}
 				width={120}
 				height={120}
 				className='head'
+        alt='.'
 			/>
 			{isOpen ? (
 				<motion.img
@@ -95,7 +100,7 @@ function App() {
 				/>
 			) : null}
 			<img
-				src='../public/Lovepik_com-401665650-christmas-tree.png'
+				src={chrismas}
 				alt='.'
 				width={180}
 				height={200}
@@ -128,7 +133,7 @@ function App() {
 			</form>
 
 			<img
-				src='../public/—Pngtree—luxury 2024 new year logo_10839113.png'
+				src={newYear}
 				alt='.'
 				width={220}
 				height={170}
