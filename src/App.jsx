@@ -88,6 +88,7 @@ function App() {
 				onClick={() => setIsOpen(!isOpen)}
 			/>
 			<form>
+      <p className='Data'>ДАТА</p>
 				<input type='date' onChange={getDate} placeholder='дата' />
 				<button onClick={clickDolg}>
 					{isActive ? 'Скрыть задолжность' : 'Узнать всю задолжность'}

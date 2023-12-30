@@ -75,12 +75,14 @@ input:hover {
   transition: 1s all;
   background-color: rgb(78, 78, 82);
 }
-
+.Data {
+  font-size: 20px;
+}
 button {
   margin-top: 30px;
-  color: rgba(255, 255, 255, 0.786);
+  color: rgba(0, 0, 0, 0.786);
   font-weight: 600;
-  background-color: #888;
+  border: 1px solid black;
 }
 p {
   font-size: 13px;
