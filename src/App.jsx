@@ -19,7 +19,7 @@ function App() {
 
   const dateDolg = [
 		{ date: '2023-12-29', value: 3150 },
-		{ date: '2023-12-30', value: null },
+		{ date: '2023-12-30', value: 2150 },
 		{ date: '2023-12-31', value: null },
 		{ date: '2024-01-01', value: null },
 		{ date: '2024-01-02', value: null },
