@@ -72,15 +72,15 @@ svg {
 
 .chrismas {
   position: relative;
-  right: 244px;
-  top: 68px;
-  transform: rotate(-30deg);
+  right: 55px;
+  top: 0px;
+  /* transform: rotate(-30deg); */
 }
 
 .chrismas:hover {
   transition: 1s all;
   scale: 1.1;
-  top: 60px;
+  top: 10px;
 }
 
 

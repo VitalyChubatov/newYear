@@ -19,8 +19,8 @@ function App() {
 
   const dateDolg = [
 		{ date: '2023-12-29', value: 3150 },
-		{ date: '2023-12-30', value: 2150 },
-		{ date: '2023-12-31', value: null },
+		{ date: '2023-12-30', value: null },
+		{ date: '2023-12-31', value: 2150 },
 		{ date: '2024-01-01', value: null },
 		{ date: '2024-01-02', value: null },
 		{ date: '2024-01-03', value: null },
@@ -85,10 +85,10 @@ function App() {
 				width={180}
 				height={200}
 				className='chrismas'
-				onClick={() => setIsOpen(!isOpen)}
+				onClick={() => setIsOpen(!isOpen) & alert('С новым Годом!!!')}
 			/>
 			<form>
-      <p className='Data'>ДАТА</p>
+				<p className='Data'>ДАТА , можешь нажать на елку</p>
 				<input type='date' onChange={getDate} placeholder='дата' />
 				<button onClick={clickDolg}>
 					{isActive ? 'Скрыть задолжность' : 'Узнать всю задолжность'}
@@ -97,11 +97,10 @@ function App() {
 					el.date === count ? (
 						<p>
 							<div className='bold'>
-              {el.value
-								? 'Этого числа ты внес:' + ' ' + el.value + ' ' + 'Рублей'
-								: null}{' '}
-              </div>
-                
+								{el.value
+									? 'Этого числа ты внес:' + ' ' + el.value + ' ' + 'Рублей'
+									: null}{' '}
+							</div>
 						</p>
 					) : null
 				)}
